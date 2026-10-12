@@ -113,6 +113,11 @@
                 <goal>check</goal>
               </goals>
               <configuration>
+                <excludes>
+                  <!-- Spring Boot bootstrap classes are framework glue, not domain logic -->
+                  <exclude>**/*Application.class</exclude>
+                  <exclude>**/*Application$*.class</exclude>
+                </excludes>
                 <rules>
                   <rule>
                     <element>BUNDLE</element>
@@ -147,5 +152,17 @@
         </plugin>
       </plugins>
     </pluginManagement>
+
+    <!-- Activate for every module (pluginManagement above only configures, doesn't bind) -->
+    <plugins>
+      <plugin>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
   </build>
 </project>

@@ -5,3 +5,12 @@ target/
 .idea/
 .vscode/*
 !.vscode/extensions.json
+
+# Secrets - never commit real .env, only .env.example
+.env
+.env.*
+!.env.example
+
+# Node (frontend, Phase 4+)
+node_modules/
+dist/
