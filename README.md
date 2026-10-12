@@ -97,7 +97,8 @@ _Coming in Phase 9_: k6 load test results (throughput, p95 latency) will be publ
 ## Project status
 
 Building phase by phase (0 through 9). See [`docs/SPEC.md`](docs/SPEC.md) for the full plan and
-the GitHub Projects board for sprint-level tracking.
+the GitHub Projects board for sprint-level tracking ([issue bodies](docs/project-board-issues.md)
+ready to paste in, one per phase, with acceptance criteria).
 
 - [x] Phase 0: repo setup, build skeleton, local infra, CI skeleton
 - [ ] Phase 1: account-service + ledger-service, double-entry posting
