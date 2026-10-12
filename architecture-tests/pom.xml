@@ -17,6 +17,52 @@
   <description>Cross-module ArchUnit rules (no double amounts, layering)</description>
 
   <dependencies>
+    <!-- Depend on every module whose classes we scan with ArchUnit -->
+    <dependency>
+      <groupId>com.ledgerflow</groupId>
+      <artifactId>common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.ledgerflow</groupId>
+      <artifactId>gateway-service</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ledgerflow</groupId>
+      <artifactId>config-server</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ledgerflow</groupId>
+      <artifactId>account-service</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ledgerflow</groupId>
+      <artifactId>payment-service</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ledgerflow</groupId>
+      <artifactId>ledger-service</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ledgerflow</groupId>
+      <artifactId>fraud-service</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ledgerflow</groupId>
+      <artifactId>notification-service</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ledgerflow</groupId>
+      <artifactId>copilot-service</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>com.tngtech.archunit</groupId>
       <artifactId>archunit-junit5</artifactId>
@@ -26,6 +72,11 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
