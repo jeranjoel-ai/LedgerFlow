@@ -26,7 +26,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- VERIFY: confirm latest Spring Cloud release train matching Boot 3.5.x -->
-    <spring-cloud.version>2025.0.0</spring-cloud.version>
+    <spring-cloud.version>2025.1.3</spring-cloud.version>
 
     <!-- Plugin versions - VERIFY latest stable before relying on them -->
     <spotless.version>2.43.0</spotless.version>
