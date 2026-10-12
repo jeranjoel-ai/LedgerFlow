@@ -1,0 +1,24 @@
+version: 2
+updates:
+  # Maven (parent POM covers all modules)
+  - package-ecosystem: maven
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: chore(deps)
+
+  # GitHub Actions workflow versions
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: chore(ci)
+
+# NOTE: an npm entry for /frontend is added in Phase 4 once that
+# directory and its package.json actually exist - Dependabot fails
+# config validation if the target directory is missing.
