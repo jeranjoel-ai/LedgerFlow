@@ -1,0 +1,21 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: notification-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/notification_db
+    username: ${DB_USERNAME:ledgerflow}
+    password: ${DB_PASSWORD:ledgerflow}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+  kafka:
+    bootstrap-servers: localhost:9092
+  mail:
+    host: ${SMTP_HOST:localhost}
+    port: ${SMTP_PORT:1025}

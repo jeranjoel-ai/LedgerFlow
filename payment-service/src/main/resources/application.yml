@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: payment-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payment_db
+    username: ${DB_USERNAME:ledgerflow}
+    password: ${DB_PASSWORD:ledgerflow}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+  kafka:
+    bootstrap-servers: localhost:9092
+  data:
+    redis:
+      host: localhost
+      port: 6379
