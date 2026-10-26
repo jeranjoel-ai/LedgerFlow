@@ -8,7 +8,7 @@
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <!-- VERIFY: confirm latest stable 3.5.x on Maven Central before committing -->
-    <version>3.5.4</version>
+    <version>4.1.2</version>
     <relativePath/>
   </parent>
 
